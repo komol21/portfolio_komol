@@ -1,0 +1,64 @@
+
+=== PAGE 1 ===
+Machine Learning & Data Science
+KOMOL KRISHNA PAUL
+Ȱ Dhaka, Bangladesh
+× +880 178 577 5186
+ć komolpaul86@gmail.com
+] komolkrishnapaul
+a komol21 | ç Live Project
+SUMMARY
+Motivated and research‐oriented Computer Science and Engineering undergraduate with hands‐on experience in machine learning
+pipelines, predictive modeling, and computer vision. Co‐author of peer‐reviewed conference publications in ML benchmarking, feature
+ablation, and spatial attention frameworks. Proficient in Python, Scikit‐learn, LightGBM, and statistical validation, with a strong
+foundation in designing fair, robust, and data‐driven algorithmic models. Seeking a Machine Learning Internship to contribute to
+high‐impact AI/ML projects.
+SKILLS & COMPETENCIES
+• Data Analytics & EDA
+• Power BI (DAX, Visuals)
+• SQL (MySQL, Queries)
+• Advanced MS Excel (Pivots)
+• Business Intelligence & Reporting
+• Python (Pandas, NumPy)
+• Scikit‐learn & LightGBM
+• Data Cleaning & Wrangling
+• Statistical Analysis & Testing
+• Predictive Modeling & ML
+• Data Visualization (KPIs)
+• MERN Stack, HTML, JS
+• Git, GitHub, MS Office
+• Problem Solving & Teamwork
+• Bengali & English (Fluent)
+PROFESSIONAL EXPERIENCE
+Undergraduate Research Assistant (URA)– CCDS–MIRA Wing, IUB – Dhaka Nov 2025 – Present
+• Perform quantitative data analysis, data cleaning, outlier treatment, and statistical validation on research datasets
+• Build predictive modeling and evaluation pipelines in Python, translating empirical data into structured insights
+• Present weekly analytics findings and visual reports to faculty researchers, supervisors, and cross‐functional teams
+• Collaborate on data‐driven research initiatives contributing to peer‐reviewed international conference publications
+PROJECTS & RESEARCH
+EduManage: Analytics‐Driven Education Management System| MERN Stack, Analytics, Dashboard 2024 – 2025
+• Designed database schemas and analytical tracking modules to monitor user engagement metrics and performance KPIs
+• Built interactive administration dashboards for real‐time reporting, course management, and academic performance tracking
+• Live Link:educationmanage.netlify.app
+T2DM Predictive Modeling & Clinical Data Analysis| Python, Scikit‐learn, LightGBM, Pandas 2025 – 2026
+• Conducted end‐to‐end data preprocessing, outlier removal, missing value imputation, and exploratory data analysis (EDA)
+• Engineered clinical indicators and conducted feature ablation studies to optimize diagnostic predictive accuracy
+• Evaluated classification algorithms with fairness benchmarks across demographic segments to eliminate model bias
+Riverine Waste Object Analytics Framework (YOLOv6m‐CW)| Python, YOLO, OpenCV, NumPy 2025 – 2026
+• Processed and structured extensive image datasets to extract, categorize, and quantify riverine pollution distribution patterns
+• Applied data augmentation, metric benchmarking, and performance optimization techniques to enhance detection precision
+• Generated analytical reports and spatial distribution insights to quantify environmental impact metrics
+PUBLICATIONS
+• Establishing Machine Learning Benchmarks for Type‐2 Diabetes Mellitus Prediction in Bangladesh: Feature Ablation and Fairness
+Analysis – ICEFronT 2026 May 2026
+• YOLOv6m‐CW: A Water‐Augmented Spatial Attention Framework for Robust Riverine Waste Monitoring– FICTA 2026 May 2026
+EDUCATION
+B.Sc. in Computer Science and Engineering– Independent University, Bangladesh (IUB) – Dhaka Jan 2022 – Aug 2026
+• CGPA: 3.37 / 4.00
+HSC in Science– Lakshmipur Government College– GPA:4.78 / 5.00 Jun 2018 – Apr 2020
+SSC in Science– Lakshmipur Adarsha Samad Govt. High School– GPA:4.61 / 5.00 Jan 2016 – Feb 2018
+CERTIFICATIONS & AWARDS
+ROBO RACE Competition – 1st Runner Up– TechFest Spring 2023, Independent University, Bangladesh Spring 2023
+Professional Certifications: 2024 – 2025
+• Data Science– Ostad (Feb 2025) | Full Stack Development with MERN– GP Academy (May 2025)
+• Agent X– NetCom Learning (Sept 2025)| Introduction to Networks– Cisco Networking Academy (Sept 2024)
