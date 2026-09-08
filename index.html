@@ -156,8 +156,8 @@
             <div class="stat-label">CGPA / 4.00 (B.Sc. CSE)</div>
           </div>
           <div class="stat-card fade-up delay-2">
-            <div class="stat-number">4+</div>
-            <div class="stat-label">Industry Certifications</div>
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Industry Certifications & Credentials</div>
           </div>
           <div class="stat-card fade-up delay-3">
             <div class="stat-number">1st</div>
@@ -269,10 +269,26 @@
       <div class="section-header">
         <span class="section-label fade-up"><i class="fa-solid fa-briefcase"></i> Experience</span>
         <h2 class="section-title fade-up delay-1">Professional Experience</h2>
-        <p class="section-subtitle fade-up delay-2">Hands-on academic and research contributions in data analysis and ML.</p>
+        <p class="section-subtitle fade-up delay-2">Hands-on industry and academic contributions in machine learning and data analytics.</p>
       </div>
       <div class="timeline">
+        <!-- Experience 1: FlyRank.ai -->
         <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Jul 2026 – Sep 2026</span>
+            <h3 class="timeline-role">Machine Learning Intern</h3>
+            <p class="timeline-company"><i class="fa-solid fa-briefcase"></i> FlyRank.ai</p>
+            <ul class="timeline-responsibilities">
+              <li>Engineered and evaluated machine learning models, conducting exploratory data analysis (EDA) and feature engineering.</li>
+              <li>Implemented data preprocessing, model benchmarking, and hyperparameter tuning to enhance predictive performance.</li>
+              <li>Collaborated with the AI engineering team to deliver scalable ML solutions and streamline analytical workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2: CCDS–MIRA Wing -->
+        <div class="timeline-item fade-up delay-1">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Nov 2025 – Present</span>
@@ -387,42 +403,28 @@
       <div class="section-header">
         <span class="section-label fade-up"><i class="fa-solid fa-award"></i> Honors & Credentials</span>
         <h2 class="section-title fade-up delay-1">Certifications & Awards</h2>
+        <p class="section-subtitle fade-up delay-2">Verified professional certifications, internship completion certificates, and letters of recommendation.</p>
       </div>
 
       <!-- Award Card -->
       <div class="achievement-card fade-up">
         <div class="achievement-trophy">🏆</div>
         <h3 class="achievement-title">ROBO RACE Competition — 1st Runner Up</h3>
-        <p class="achievement-subtitle">TechFest Spring 2023</p>
+        <p class="achievement-subtitle">TechFest Spring 2023 · Team "Velocity Freaks"</p>
         <p class="achievement-details">Independent University, Bangladesh (Spring 2023)</p>
+        <div class="achievement-actions">
+          <button class="cert-action-btn cert-view-btn" onclick="openCertificateModal('roborace-award')">
+            <i class="fa-solid fa-eye"></i> View Certificate
+          </button>
+          <a href="Certificate/RoboRace.jpeg" target="_blank" rel="noopener noreferrer" class="cert-action-btn cert-open-btn" title="Open certificate in new tab">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
       </div>
 
-      <!-- Certifications Grid with Dates and Providers -->
-      <div class="certs-grid">
-        <div class="cert-card fade-up">
-          <div class="cert-icon">📊</div>
-          <h4 class="cert-name">Data Science</h4>
-          <p class="cert-issuer">Ostad</p>
-          <span class="cert-date"><i class="fa-regular fa-calendar"></i> Feb 2025</span>
-        </div>
-        <div class="cert-card fade-up delay-1">
-          <div class="cert-icon">💻</div>
-          <h4 class="cert-name">Full Stack Development with MERN</h4>
-          <p class="cert-issuer">GP Academy</p>
-          <span class="cert-date"><i class="fa-regular fa-calendar"></i> May 2025</span>
-        </div>
-        <div class="cert-card fade-up delay-2">
-          <div class="cert-icon">🤖</div>
-          <h4 class="cert-name">Agent X</h4>
-          <p class="cert-issuer">NetCom Learning</p>
-          <span class="cert-date"><i class="fa-regular fa-calendar"></i> Sept 2025</span>
-        </div>
-        <div class="cert-card fade-up delay-3">
-          <div class="cert-icon">🌐</div>
-          <h4 class="cert-name">Introduction to Networks</h4>
-          <p class="cert-issuer">Cisco Networking Academy</p>
-          <span class="cert-date"><i class="fa-regular fa-calendar"></i> Sept 2024</span>
-        </div>
+      <!-- Certifications Grid (Rendered dynamically via script.js) -->
+      <div class="certs-grid" id="certsGrid">
+        <!-- Rendered dynamically by script.js -->
       </div>
     </div>
   </section>
@@ -498,6 +500,18 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
       <div class="modal-content" id="modalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CERTIFICATE VIEWER MODAL ===== -->
+  <div class="modal-overlay" id="certificateModal">
+    <div class="modal-container cert-modal-container">
+      <button class="modal-close" id="certModalClose" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="cert-modal-wrapper" id="certModalContent">
         <!-- Injected via JavaScript -->
       </div>
     </div>

@@ -204,22 +204,240 @@ function closeCaseStudy() {
   }
 }
 
+/* ===================================================================
+   CERTIFICATES DATA & VIEWER
+   =================================================================== */
+const certificatesData = [
+  {
+    id: "flyrank-ml-cert",
+    title: "Machine Learning Internship Certificate",
+    issuer: "FlyRank.ai",
+    category: "AI & Machine Learning",
+    date: "Sep 2026",
+    icon: "🤖",
+    file: "Certificate/flyrank-certificate-of-completion-machine-learning-83cc822d-d544-4d0f-a64f-b79c76d2ac7a.pdf",
+    type: "pdf",
+    badge: "Internship Certificate"
+  },
+  {
+    id: "flyrank-lor",
+    title: "Letter of Recommendation (LOR)",
+    issuer: "FlyRank.ai",
+    category: "Professional Endorsement",
+    date: "Sep 2026",
+    icon: "📜",
+    file: "Certificate/flyrank-recommendation-letter-83cc822d-d544-4d0f-a64f-b79c76d2ac7a.pdf",
+    type: "pdf",
+    badge: "Recommendation Letter"
+  },
+  {
+    id: "flyrank-eval",
+    title: "Internship Evaluation & Performance Report",
+    issuer: "FlyRank.ai",
+    category: "Performance Review",
+    date: "Sep 2026",
+    icon: "📈",
+    file: "Certificate/flyrank-final-internship-report-evaluation-83cc822d-d544-4d0f-a64f-b79c76d2ac7a.pdf",
+    type: "pdf",
+    badge: "Evaluation Report"
+  },
+  {
+    id: "aicerts-prompt",
+    title: "AI+ Prompt Engineer Level 1™",
+    issuer: "AI CERTS™",
+    category: "Generative AI & Prompt Engineering",
+    date: "Jul 2025",
+    icon: "🧠",
+    file: "Certificate/Certificate-1.png",
+    type: "image",
+    badge: "Global Certification"
+  },
+  {
+    id: "ostad-ds",
+    title: "Data Science Professional Track",
+    issuer: "Ostad",
+    category: "Data Science & Analytics",
+    date: "Feb 2025",
+    icon: "📊",
+    file: "Certificate/Komol Krishna Paul-Data Science 38-C22824 (1).pdf",
+    type: "pdf",
+    badge: "Professional Program"
+  },
+  {
+    id: "gp-mern",
+    title: "Full Stack Development with MERN",
+    issuer: "GP Academy",
+    category: "Web & Software Development",
+    date: "May 2025",
+    icon: "💻",
+    file: "Certificate/certificate-full-stack-development-with-mern.pdf",
+    type: "pdf",
+    badge: "Developer Certification"
+  },
+  {
+    id: "netcom-agentx",
+    title: "Agent X",
+    issuer: "NetCom Learning",
+    category: "Autonomous AI Agents",
+    date: "Sep 15, 2025",
+    icon: "⚡",
+    file: "Certificate/AgentX.png",
+    type: "image",
+    badge: "NetCom Certified"
+  },
+  {
+    id: "cisco-network",
+    title: "CCNAv7: Introduction to Networks",
+    issuer: "Cisco Networking Academy",
+    category: "Network Engineering & IT",
+    date: "Sep 13, 2024",
+    icon: "🌐",
+    file: "Certificate/CCNA-_Introduction_to_Networks_certificate_komolpaul86-gmail-com_403c719b-032e-4427-b7b2-8d53ebbeff54.pdf",
+    type: "pdf",
+    badge: "Cisco Certified"
+  },
+  {
+    id: "roborace-award",
+    title: "1st Runners Up — RC Robo Race (TechFest Spring 2023)",
+    issuer: "Independent University, Bangladesh (IUB)",
+    category: "Robotics Competition Award",
+    date: "Spring 2023",
+    icon: "🏆",
+    file: "Certificate/RoboRace.jpeg",
+    type: "image",
+    badge: "1st Runner Up Award"
+  }
+];
+
+function renderCertificates() {
+  const grid = document.getElementById("certsGrid");
+  if (!grid) return;
+
+  grid.innerHTML = certificatesData
+    .map((cert, index) => {
+      const delay = (index % 4) + 1;
+      const encodedFile = cert.file ? encodeURI(cert.file) : null;
+      return `
+        <div class="cert-card fade-up delay-${delay}">
+          <div class="cert-card-top">
+            <div class="cert-icon">${cert.icon}</div>
+            <span class="cert-badge">${cert.badge || cert.issuer}</span>
+          </div>
+          <h4 class="cert-name">${cert.title}</h4>
+          <p class="cert-issuer">${cert.issuer} · ${cert.category}</p>
+          <div class="cert-meta">
+            <span class="cert-date"><i class="fa-regular fa-calendar"></i> ${cert.date}</span>
+          </div>
+          <div class="cert-card-actions">
+            ${
+              encodedFile
+                ? `
+              <button class="cert-action-btn cert-view-btn" onclick="openCertificateModal('${cert.id}')">
+                <i class="fa-solid fa-eye"></i> View Certificate
+              </button>
+              <a href="${encodedFile}" target="_blank" rel="noopener noreferrer" class="cert-action-btn cert-open-btn" title="Open certificate in new tab">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            `
+                : `
+              <span class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Credential</span>
+            `
+            }
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function openCertificateModal(certId) {
+  const cert = certificatesData.find((c) => c.id === certId);
+  if (!cert || !cert.file) return;
+
+  const modal = document.getElementById("certificateModal");
+  const modalContent = document.getElementById("certModalContent");
+  if (!modal || !modalContent) return;
+
+  const encodedFile = encodeURI(cert.file);
+
+  let mediaHtml = "";
+  if (cert.type === "pdf") {
+    mediaHtml = `
+      <div class="cert-media-container cert-pdf-container">
+        <iframe src="${encodedFile}#view=FitH" class="cert-modal-iframe" title="${cert.title}"></iframe>
+      </div>
+      <p class="cert-fallback-text">
+        <i class="fa-solid fa-circle-info"></i> If the PDF preview does not display, 
+        <a href="${encodedFile}" target="_blank" rel="noopener noreferrer">click here to open directly</a>.
+      </p>
+    `;
+  } else {
+    mediaHtml = `
+      <div class="cert-media-container cert-img-container">
+        <img src="${encodedFile}" alt="${cert.title}" class="cert-modal-img" loading="lazy">
+      </div>
+    `;
+  }
+
+  modalContent.innerHTML = `
+    <div class="cert-modal-header">
+      <span class="cert-modal-category">${cert.category} · ${cert.date}</span>
+      <h2 class="cert-modal-title">${cert.title}</h2>
+      <p class="cert-modal-issuer"><i class="fa-solid fa-building"></i> Issued by <strong>${cert.issuer}</strong></p>
+    </div>
+    
+    <div class="cert-modal-body">
+      ${mediaHtml}
+    </div>
+
+    <div class="cert-modal-footer">
+      <a href="${encodedFile}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+      </a>
+      <a href="${encodedFile}" download class="btn btn-secondary">
+        <i class="fa-solid fa-download"></i> Download
+      </a>
+      <button class="btn btn-secondary" onclick="closeCertificateModal()">Close</button>
+    </div>
+  `;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCertificateModal() {
+  const modal = document.getElementById("certificateModal");
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+}
+
 function initModal() {
   const closeBtn = document.getElementById("modalClose");
   const modal = document.getElementById("caseStudyModal");
+  const certCloseBtn = document.getElementById("certModalClose");
+  const certModal = document.getElementById("certificateModal");
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeCaseStudy);
-  }
-
+  if (closeBtn) closeBtn.addEventListener("click", closeCaseStudy);
   if (modal) {
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closeCaseStudy();
     });
   }
 
+  if (certCloseBtn) certCloseBtn.addEventListener("click", closeCertificateModal);
+  if (certModal) {
+    certModal.addEventListener("click", (e) => {
+      if (e.target === certModal) closeCertificateModal();
+    });
+  }
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeCaseStudy();
+    if (e.key === "Escape") {
+      closeCaseStudy();
+      closeCertificateModal();
+    }
   });
 }
 
@@ -375,6 +593,7 @@ function initSmoothScroll() {
    =================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
+  renderCertificates();
   initTheme();
   initNavbar();
   initMobileMenu();

@@ -1,0 +1,219 @@
+% !TEX program = xelatex
+%-------------------------
+% IT Intern CV - Komol Krishna Paul
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\linespread{1.0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[top=0.42in, bottom=0.40in, left=0.45in, right=0.45in, footskip=4pt]{geometry}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% ---------- Colors ----------
+\definecolor{cvblue}{HTML}{1A3A5C}
+\definecolor{linkblue}{HTML}{2563EB}
+\hypersetup{colorlinks=false}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries\color{cvblue}
+}{}{0em}{}[\color{cvblue}\titlerule\vspace{-5pt}]
+
+% ---------- Custom Commands ----------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2.5pt}}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{minipage}[t]{0.70\textwidth}
+      \small#1
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.30\textwidth}
+      \raggedleft\small\textit{#2}
+    \end{minipage}\vspace{-6pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\renewcommand\labelitemi{\raise0.2ex\hbox{\fontspec{Segoe UI Symbol}•}}
+\renewcommand\labelitemii{\raise0.2ex\hbox{\fontspec{Segoe UI Symbol}•}}
+
+% ===========================================================================
+\begin{document}
+
+% ---------- HEADING ----------
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \begin{minipage}[t]{0.56\textwidth}
+    \raggedright
+    {\small IT Support $\cdot$ Systems Administration $\cdot$ Software Development}\\[2pt]
+    {\fontsize{22pt}{26pt}\selectfont\bfseries\scshape Komol Krishna Paul}\\[2pt]
+    {\small \faMapMarker*\ Morol Bazar Nadda, Dhaka, Bangladesh}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.43\textwidth}
+    \raggedleft\small
+    \faPhone\ +880\,178\,577\,5186 \\
+    \href{mailto:komolpaul86@gmail.com}{\textcolor{linkblue}{\faEnvelope\ komolpaul86@gmail.com}}\\
+    \href{https://linkedin.com/in/komolkrishnapaul}{\textcolor{linkblue}{\faLinkedin\ komolkrishnapaul}}\\
+    \href{https://github.com/komol21}{\textcolor{linkblue}{\faGithub\ komol21}} $|$ \href{https://portfolio1234dd.netlify.app/}{\textcolor{linkblue}{\faGlobe\ Portfolio}}
+  \end{minipage}
+  \\
+\end{tabularx}
+
+\vspace{-3pt}
+
+% ---------- PROFESSIONAL SUMMARY ----------
+\section{Summary}
+\small{Proactive and detail-oriented Computer Science \& Engineering undergraduate with a solid foundation in IT support, computer hardware, software troubleshooting, local server maintenance, and networking. Practical experience in managing digital tools, developing web applications (MERN), automating routine workflows using Python, and configuring office IT infrastructure. Certified in Cisco networking fundamentals with strong problem-solving and communication skills, eager to contribute to day-to-day IT operations, technical support, and software system workflows.}
+\vspace{-3pt}
+
+% ---------- SKILLS & COMPETENCIES ----------
+\section{Skills \& Competencies}
+\vspace{-14pt}
+\begin{multicols}{3}
+\begin{itemize}[leftmargin=0.15in, itemsep=1.5pt, parsep=0pt, topsep=0pt]
+  \small
+  % Column 1: Core Analytics & BI
+  \item \textbf{Data Analytics \& EDA}
+  \item \textbf{Power BI (DAX, Visuals)}
+  \item \textbf{SQL (MySQL, Queries)}
+  \item Advanced MS Excel (Pivots)
+  \item Business Intelligence \& Reporting
+  % Column 2: Python & Statistical Modeling
+  \item \textbf{Python (Pandas, NumPy)}
+  \item \textbf{Scikit-learn \& LightGBM}
+  \item Data Cleaning \& Wrangling
+  \item Statistical Analysis \& Testing
+  \item Predictive Modeling \& ML
+  % Column 3: Web & Workflow Tools
+  \item \textbf{Data Visualization (KPIs)}
+  \item MERN Stack, HTML, JS
+  \item Git, GitHub, MS Office
+  \item Problem Solving \& Teamwork
+  \item Bengali \& English (Fluent)
+\end{itemize}
+\end{multicols}
+\vspace{-16pt}
+
+% ---------- PROFESSIONAL EXPERIENCE ----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Machine Learning Intern} -- \textit{FlyRank.ai}}{Jul 2026 -- Sep 2026}
+    \resumeItemListStart
+      \resumeItem{Engineered and evaluated machine learning models, conducting exploratory data analysis (EDA) and feature engineering}
+      \resumeItem{Implemented data preprocessing, model benchmarking, and hyperparameter tuning to enhance predictive performance}
+      \resumeItem{Collaborated with the AI engineering team to deliver scalable ML solutions and streamline analytical workflows}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Undergraduate Research Assistant (URA)} -- \textit{CCDS--MIRA Wing, IUB -- Dhaka}}{Nov 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Perform quantitative data analysis, data cleaning, outlier treatment, and statistical validation on research datasets}
+      \resumeItem{Build predictive modeling and evaluation pipelines in Python, translating empirical data into structured insights}
+      \resumeItem{Present weekly analytics findings and visual reports to faculty researchers, supervisors, and cross-functional teams}
+      \resumeItem{Collaborate on data-driven research initiatives contributing to peer-reviewed international conference publications}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ---------- PROJECTS & RESEARCH ----------
+\section{Projects \& Research}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{EduManage: Analytics-Driven Education Management System} $|$ \textit{\textcolor{cvblue}{MERN Stack, Analytics}}}{\href{https://educationmanage.netlify.app/auth/login}{\textcolor{linkblue}{\faGlobe\ Live Link}} $|$ 2024 -- 2025}
+    \resumeItemListStart
+      \resumeItem{Designed database schemas and analytical tracking modules to monitor user engagement metrics and performance KPIs}
+      \resumeItem{Built interactive administration dashboards for real-time reporting, course management, and academic performance tracking}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{T2DM Predictive Modeling \& Clinical Data Analysis} $|$ \textit{\textcolor{cvblue}{Python, Scikit-learn, LightGBM, Pandas}}}{2025 -- 2026}
+    \resumeItemListStart
+      \resumeItem{Conducted end-to-end data preprocessing, outlier removal, missing value imputation, and exploratory data analysis (EDA)}
+      \resumeItem{Engineered clinical indicators and conducted feature ablation studies to optimize diagnostic predictive accuracy}
+      \resumeItem{Evaluated classification algorithms with fairness benchmarks across demographic segments to eliminate model bias}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Riverine Waste Object Analytics Framework (YOLOv6m-CW)} $|$ \textit{\textcolor{cvblue}{Python, YOLO, OpenCV, NumPy}}}{2025 -- 2026}
+    \resumeItemListStart
+      \resumeItem{Processed and structured extensive image datasets to extract, categorize, and quantify riverine pollution distribution patterns}
+      \resumeItem{Applied data augmentation, metric benchmarking, and performance optimization techniques to enhance detection precision}
+      \resumeItem{Generated analytical reports and spatial distribution insights to quantify environmental impact metrics}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ---------- PUBLICATIONS ----------
+\section{Publications}
+\begin{itemize}[leftmargin=0.15in, itemsep=3pt, parsep=0pt, topsep=1pt]
+  \item \small{\textit{\textbf{Establishing Machine Learning Benchmarks for Type-2 Diabetes Mellitus Prediction in Bangladesh: Feature Ablation and Fairness Analysis}} -- ICEFronT 2026 \hfill \textit{May 2026}}
+  \item \small{\textit{\textbf{YOLOv6m-CW: A Water-Augmented Spatial Attention Framework for Robust Riverine Waste Monitoring}} -- FICTA 2026 \hfill \textit{May 2026}}
+\end{itemize}
+\vspace{-3pt}
+
+% ---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{B.Sc.\ in Computer Science and Engineering} -- \textit{Independent University, Bangladesh (IUB) -- Dhaka}}{Jan 2022 -- Aug 2026}
+    \resumeItemListStart
+      \resumeItem{CGPA: \textbf{3.37\,/\,4.00}}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{HSC in Science} -- \textit{Lakshmipur Government College} -- GPA: \textbf{4.78\,/\,5.00}}{Jun 2018 -- Apr 2020}
+
+  \resumeProjectHeading
+    {\textbf{SSC in Science} -- \textit{Lakshmipur Adarsha Samad Govt.\ High School} -- GPA: \textbf{4.61\,/\,5.00}}{Jan 2016 -- Feb 2018}
+
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+% ---------- CERTIFICATIONS & AWARDS ----------
+\section{Certifications \& Awards}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{ROBO RACE Competition -- 1st Runner Up} -- \textit{TechFest Spring 2023, Independent University, Bangladesh}}{Spring 2023}
+  \resumeProjectHeading
+    {\textbf{Professional Certifications:}}{2024 -- 2025}
+    \resumeItemListStart
+      \resumeItem{\textbf{Data Science} -- Ostad (Feb 2025) \quad$|$\quad \textbf{Full Stack Development with MERN} -- GP Academy (May 2025)}
+      \resumeItem{\textbf{Agent X} -- NetCom Learning (Sept 2025) \quad$|$\quad \textbf{Introduction to Networks} -- Cisco Networking Academy (Sept 2024)}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
